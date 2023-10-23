@@ -24,7 +24,7 @@ public class DepServiceImpl implements IDepService {
 		this.dao = dao;
 	}
 
-	@Override
+
 	public List<Dep> findAll() {
 		// TODO Auto-generated method stub
 		return dao.getDepMapper().findAll();

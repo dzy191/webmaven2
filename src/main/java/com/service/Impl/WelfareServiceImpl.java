@@ -26,7 +26,7 @@ public class WelfareServiceImpl implements IWelfareService {
 		this.dao = dao;
 	}
 
-	@Override
+
 	public List<Welfare> findAll() {
 		// TODO Auto-generated method stub
 		return dao.getWelfareMapper().findAll();

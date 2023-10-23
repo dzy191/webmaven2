@@ -29,7 +29,7 @@ public class EmpServiceImpl implements IEmpService {
 	public void setDao(DaoService dao) {
 		this.dao = dao;
 	}
-	@Override
+
 	public boolean save(Emp emp) {
 		if(emp!=null){
 			//1.添加员工数据到员工表
@@ -52,7 +52,7 @@ public class EmpServiceImpl implements IEmpService {
 		return false;
 	}
 
-	@Override
+
 	public boolean update(Emp emp) {
 		//完成emp修改
 		int code=dao.getEmpMapper().update(emp);
@@ -76,7 +76,7 @@ public class EmpServiceImpl implements IEmpService {
 		return false;
 	}
 
-	@Override
+
 	public boolean delById(Integer eid) {
 		//2.删除薪资信息
 		dao.getSalaryMapper().delByEid(eid);
@@ -91,7 +91,7 @@ public class EmpServiceImpl implements IEmpService {
 		return false;
 	}
 
-	@Override
+
 	public Emp findById(Integer eid) {
 		//查询员工对象
 		Emp oldemp=dao.getEmpMapper().findById(eid);
@@ -109,13 +109,13 @@ public class EmpServiceImpl implements IEmpService {
 		return oldemp;
 	}
 
-	@Override
+
 	public List<Emp> findPageAll(PageBean pb) {
 		// TODO Auto-generated method stub
 		return dao.getEmpMapper().findPageAll(pb);
 	}
 
-	@Override
+
 	public int findMaxRows() {
 		// TODO Auto-generated method stub
 		return dao.getEmpMapper().findMaxRows();
